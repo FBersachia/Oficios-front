@@ -52,10 +52,10 @@
 
 ## 3.0 Creación de Componentes Reutilizables de UI
 
-- [ ] 3.1 Componentes de layout:
-  - [ ] 3.1.1 `Header` con navegación responsiva y estado de autenticación
-  - [ ] 3.1.2 `Footer` con información de contacto y enlaces legales
-  - [ ] 3.1.3 `Layout` principal con Header/Footer
+- [x] 3.1 Componentes de layout:
+  - [x] 3.1.1 `Header` con navegación responsiva y estado de autenticación
+  - [x] 3.1.2 `Footer` con información de contacto y enlaces legales
+  - [x] 3.1.3 `Layout` principal con Header/Footer
 - [ ] 3.2 Componentes de providers:
   - [ ] 3.2.1 `ProviderCard` con rating, servicios, y estado de disponibilidad
   - [ ] 3.2.2 `ProviderGrid` para listados con lazy loading
