@@ -11,7 +11,7 @@
   - [x] 1.2.5 `react-hook-form` + `@hookform/resolvers` (formularios)
   - [x] 1.2.6 `zod` (validación de esquemas)
   - [x] 1.2.7 `tailwindcss` (estilos)
-  - [ ] 1.2.8 `shadcn/ui` (componentes UI)
+  - [x] 1.2.8 `shadcn/ui` (componentes UI)
   - [x] 1.2.9 `react-hot-toast` (notificaciones)
   - [x] 1.2.10 `lucide-react` (iconos)
 - [x] 1.3 Configurar la estructura de carpetas optimizada:
