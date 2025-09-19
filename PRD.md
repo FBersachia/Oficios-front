@@ -60,10 +60,10 @@
   - [x] 3.2.1 `ProviderCard` con rating, servicios, y estado de disponibilidad
   - [x] 3.2.2 `ProviderGrid` para listados con lazy loading
   - [x] 3.2.3 `ProviderSkeleton` para estados de carga
-- [ ] 3.3 Componentes de búsqueda y filtros:
-  - [ ] 3.3.1 `SearchBar` con autocomplete y validación
-  - [ ] 3.3.2 `FilterPanel` para servicios, ubicación, rating, etc.
-  - [ ] 3.3.3 `SortSelector` para ordenamiento de resultados
+- [x] 3.3 Componentes de búsqueda y filtros:
+  - [x] 3.3.1 `SearchBar` con autocomplete y validación
+  - [x] 3.3.2 `FilterPanel` para servicios, ubicación, rating, etc.
+  - [x] 3.3.3 `SortSelector` para ordenamiento de resultados
 - [ ] 3.4 Componentes de UI generales:
   - [ ] 3.4.1 `LoadingSpinner` y estados de carga
   - [ ] 3.4.2 `ErrorMessage` para manejo de errores
