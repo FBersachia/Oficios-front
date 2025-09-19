@@ -2,6 +2,7 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import api from '@/lib/axios';
 import { isTokenExpired } from '@/utils/tokenUtils';
+import { notificationService } from '@/services/notificationService';
 import type { AuthStore, LoginCredentials, RegisterData, AuthResponse, User } from '@/types/auth';
 
 const useAuthStore = create<AuthStore>()(
@@ -29,6 +30,9 @@ const useAuthStore = create<AuthStore>()(
 
           // Update axios default header for future requests
           api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+
+          // Show success notification
+          notificationService.success(`¡Bienvenido, ${user.fullName}!`);
         } catch (error: any) {
           const errorMessage = error.response?.data?.message || 'Error al iniciar sesión';
           set({
@@ -38,6 +42,9 @@ const useAuthStore = create<AuthStore>()(
             isLoading: false,
             error: errorMessage,
           });
+
+          // Show error notification
+          notificationService.error(errorMessage);
           throw error;
         }
       },
@@ -58,6 +65,9 @@ const useAuthStore = create<AuthStore>()(
 
           // Update axios default header for future requests
           api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+
+          // Show success notification
+          notificationService.success(`¡Cuenta creada exitosamente! Bienvenido, ${user.fullName}!`);
         } catch (error: any) {
           const errorMessage = error.response?.data?.message || 'Error al registrar usuario';
           set({
@@ -67,6 +77,9 @@ const useAuthStore = create<AuthStore>()(
             isLoading: false,
             error: errorMessage,
           });
+
+          // Show error notification
+          notificationService.error(errorMessage);
           throw error;
         }
       },
@@ -84,6 +97,9 @@ const useAuthStore = create<AuthStore>()(
 
         // Clear localStorage
         localStorage.removeItem('auth-storage');
+
+        // Show logout notification
+        notificationService.info('Sesión cerrada exitosamente');
       },
 
       setUser: (user: User) => {
@@ -102,6 +118,8 @@ const useAuthStore = create<AuthStore>()(
       checkTokenExpiration: () => {
         const { token, logout } = get();
         if (token && isTokenExpired(token)) {
+          // Show session expired notification before logout
+          notificationService.warning('Tu sesión ha expirado. Por favor, inicia sesión nuevamente.');
           logout();
         }
       },

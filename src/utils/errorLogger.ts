@@ -1,5 +1,15 @@
 import type { AppError, ErrorLogEntry, ErrorLevel } from '@/types/error';
 
+// Lazy import to avoid circular dependencies
+let notificationService: any = null;
+const getNotificationService = async () => {
+  if (!notificationService) {
+    const module = await import('@/services/notificationService');
+    notificationService = module.notificationService;
+  }
+  return notificationService;
+};
+
 class ErrorLogger {
   private logs: ErrorLogEntry[] = [];
   private maxLogs = 100; // Keep last 100 errors in memory
@@ -35,6 +45,9 @@ class ErrorLogger {
 
     // Console logging based on level
     this.consoleLog(entry);
+
+    // Show toast notification for user-facing errors
+    this.showToastNotification(entry);
 
     // Send to external service (if configured)
     this.sendToExternalService(entry);
@@ -173,6 +186,41 @@ class ErrorLogger {
       case 'low':
         console.info(logData);
         break;
+    }
+  }
+
+  private async showToastNotification(entry: ErrorLogEntry): Promise<void> {
+    // Only show toast for certain error levels and sources
+    const shouldShowToast =
+      (entry.level === 'high' || entry.level === 'critical') &&
+      (entry.source === 'api' || entry.source === 'network');
+
+    if (!shouldShowToast) return;
+
+    try {
+      const notifications = await getNotificationService();
+
+      // Don't show toast for authentication errors (handled elsewhere)
+      if (entry.statusCode === 401 || entry.statusCode === 403) {
+        return;
+      }
+
+      // Show appropriate toast based on error type
+      if (entry.source === 'network') {
+        notifications.warning('Error de conexión. Verifica tu conexión a internet.');
+      } else if (entry.statusCode && entry.statusCode >= 500) {
+        notifications.error('Error del servidor. Intenta nuevamente más tarde.');
+      } else if (entry.level === 'critical') {
+        notifications.error('Ocurrió un error crítico. La página se recargará automáticamente.');
+
+        // Auto-reload for critical errors after a delay
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000);
+      }
+    } catch (error) {
+      // Fallback - don't create infinite error loops
+      console.warn('Could not show error notification:', error);
     }
   }
 

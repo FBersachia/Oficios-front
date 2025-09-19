@@ -46,7 +46,7 @@
   - [x] 2.2.2 Funciones de autenticación
   - [x] 2.2.3 Funciones de providers y reviews
 - [x] 2.3 Configurar error boundaries y manejo global de errores.
-- [ ] 2.4 Configurar sistema de notificaciones (toast) global.
+- [x] 2.4 Configurar sistema de notificaciones (toast) global.
 
 ---
 
