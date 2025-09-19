@@ -87,13 +87,13 @@
   - [x] 4.2.3 Ordenamiento por relevancia, rating, fecha
   - [x] 4.2.4 Estado "sin resultados" con sugerencias
   - [x] 4.2.5 Persistencia de filtros en URL para compartir búsquedas
-- [ ] 4.3 **Página de Detalle del Proveedor (`/providers/:id`):**
-  - [ ] 4.3.1 Header con información principal y botón de contacto
-  - [ ] 4.3.2 Galería de portfolio con lightbox
-  - [ ] 4.3.3 Sección de reseñas con filtros y paginación
-  - [ ] 4.3.4 Mapa de ubicación (si disponible)
-  - [ ] 4.3.5 Botón para escribir reseña (autenticación requerida)
-  - [ ] 4.3.6 SEO optimizado por proveedor
+- [x] 4.3 **Página de Detalle del Proveedor (`/providers/:id`):**
+  - [x] 4.3.1 Header con información principal y botón de contacto
+  - [x] 4.3.2 Galería de portfolio con lightbox
+  - [x] 4.3.3 Sección de reseñas con filtros y paginación
+  - [x] 4.3.4 Mapa de ubicación (si disponible)
+  - [x] 4.3.5 Botón para escribir reseña (autenticación requerida)
+  - [x] 4.3.6 SEO optimizado por proveedor
 
 ---
 
