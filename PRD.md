@@ -41,10 +41,10 @@
   - [x] 2.1.1 Estado de usuario, token, y funciones de login/logout
   - [x] 2.1.2 Persistencia en localStorage
   - [x] 2.1.3 Auto-refresh de token
-- [ ] 2.2 Crear servicio de API con tipos TypeScript:
-  - [ ] 2.2.1 Definir tipos basados en `FRONTEND_API_DOCUMENTATION.md`
-  - [ ] 2.2.2 Funciones de autenticación
-  - [ ] 2.2.3 Funciones de providers y reviews
+- [x] 2.2 Crear servicio de API con tipos TypeScript:
+  - [x] 2.2.1 Definir tipos basados en `FRONTEND_API_DOCUMENTATION.md`
+  - [x] 2.2.2 Funciones de autenticación
+  - [x] 2.2.3 Funciones de providers y reviews
 - [ ] 2.3 Configurar error boundaries y manejo global de errores.
 - [ ] 2.4 Configurar sistema de notificaciones (toast) global.
 
