@@ -81,12 +81,12 @@
   - [x] 4.1.4 Testimonios/reseñas destacadas
   - [x] 4.1.5 Sección "Cómo funciona" explicativa
   - [x] 4.1.6 Optimización SEO (meta tags, structured data)
-- [ ] 4.2 **Página de Resultados de Búsqueda (`/providers`):**
-  - [ ] 4.2.1 `FilterPanel` lateral con filtros activos visibles
-  - [ ] 4.2.2 Grilla responsiva de `ProviderCard` con infinite scroll
-  - [ ] 4.2.3 Ordenamiento por relevancia, rating, fecha
-  - [ ] 4.2.4 Estado "sin resultados" con sugerencias
-  - [ ] 4.2.5 Persistencia de filtros en URL para compartir búsquedas
+- [x] 4.2 **Página de Resultados de Búsqueda (`/providers`):**
+  - [x] 4.2.1 `FilterPanel` lateral con filtros activos visibles
+  - [x] 4.2.2 Grilla responsiva de `ProviderCard` con infinite scroll
+  - [x] 4.2.3 Ordenamiento por relevancia, rating, fecha
+  - [x] 4.2.4 Estado "sin resultados" con sugerencias
+  - [x] 4.2.5 Persistencia de filtros en URL para compartir búsquedas
 - [ ] 4.3 **Página de Detalle del Proveedor (`/providers/:id`):**
   - [ ] 4.3.1 Header con información principal y botón de contacto
   - [ ] 4.3.2 Galería de portfolio con lightbox

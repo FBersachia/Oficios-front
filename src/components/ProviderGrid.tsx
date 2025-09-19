@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { ProviderCard } from './ProviderCard';
 import { ProviderGridSkeleton } from './ProviderSkeleton';
+import { NoResultsState } from './NoResultsState';
 import { Button } from '@/components/ui/button';
 import { AlertCircle, RefreshCw } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -21,6 +22,9 @@ interface ProviderGridProps {
   emptyMessage?: string;
   showContactButton?: boolean;
   enableInfiniteScroll?: boolean;
+  onClearFilters?: () => void;
+  onSearchSuggestion?: (suggestion: string) => void;
+  onLocationSuggestion?: (location: string) => void;
 }
 
 export const ProviderGrid: React.FC<ProviderGridProps> = ({
@@ -36,6 +40,9 @@ export const ProviderGrid: React.FC<ProviderGridProps> = ({
   emptyMessage = 'No se encontraron proveedores con los criterios de búsqueda.',
   showContactButton = true,
   enableInfiniteScroll = false,
+  onClearFilters,
+  onSearchSuggestion,
+  onLocationSuggestion,
 }) => {
   const { showApiError } = useNotifications();
   const [isRetrying, setIsRetrying] = useState(false);
@@ -121,6 +128,20 @@ export const ProviderGrid: React.FC<ProviderGridProps> = ({
 
   // Empty state
   if (!loading && providers.length === 0) {
+    // Use NoResultsState if handlers are provided (search results page)
+    if (onClearFilters && onSearchSuggestion && onLocationSuggestion && searchParams) {
+      return (
+        <NoResultsState
+          searchParams={searchParams}
+          onClearFilters={onClearFilters}
+          onSearchSuggestion={onSearchSuggestion}
+          onLocationSuggestion={onLocationSuggestion}
+          className={className}
+        />
+      );
+    }
+
+    // Fallback to simple empty state
     return (
       <div className={cn('text-center py-12', className)}>
         <div className="max-w-md mx-auto">
