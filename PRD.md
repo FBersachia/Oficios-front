@@ -64,11 +64,11 @@
   - [x] 3.3.1 `SearchBar` con autocomplete y validación
   - [x] 3.3.2 `FilterPanel` para servicios, ubicación, rating, etc.
   - [x] 3.3.3 `SortSelector` para ordenamiento de resultados
-- [ ] 3.4 Componentes de UI generales:
-  - [ ] 3.4.1 `LoadingSpinner` y estados de carga
-  - [ ] 3.4.2 `ErrorMessage` para manejo de errores
-  - [ ] 3.4.3 `Pagination` reutilizable
-  - [ ] 3.4.4 `Rating` component para mostrar/editar calificaciones
+- [x] 3.4 Componentes de UI generales:
+  - [x] 3.4.1 `LoadingSpinner` y estados de carga
+  - [x] 3.4.2 `ErrorMessage` para manejo de errores
+  - [x] 3.4.3 `Pagination` reutilizable
+  - [x] 3.4.4 `Rating` component para mostrar/editar calificaciones
 
 ---
 
