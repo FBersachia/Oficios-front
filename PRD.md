@@ -45,7 +45,7 @@
   - [x] 2.2.1 Definir tipos basados en `FRONTEND_API_DOCUMENTATION.md`
   - [x] 2.2.2 Funciones de autenticación
   - [x] 2.2.3 Funciones de providers y reviews
-- [ ] 2.3 Configurar error boundaries y manejo global de errores.
+- [x] 2.3 Configurar error boundaries y manejo global de errores.
 - [ ] 2.4 Configurar sistema de notificaciones (toast) global.
 
 ---
