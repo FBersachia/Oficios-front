@@ -37,10 +37,10 @@
 
 ## 2.0 Configuración de Infraestructura y Estado Global
 
-- [ ] 2.1 Crear store de autenticación con Zustand:
-  - [ ] 2.1.1 Estado de usuario, token, y funciones de login/logout
-  - [ ] 2.1.2 Persistencia en localStorage
-  - [ ] 2.1.3 Auto-refresh de token
+- [x] 2.1 Crear store de autenticación con Zustand:
+  - [x] 2.1.1 Estado de usuario, token, y funciones de login/logout
+  - [x] 2.1.2 Persistencia en localStorage
+  - [x] 2.1.3 Auto-refresh de token
 - [ ] 2.2 Crear servicio de API con tipos TypeScript:
   - [ ] 2.2.1 Definir tipos basados en `FRONTEND_API_DOCUMENTATION.md`
   - [ ] 2.2.2 Funciones de autenticación
