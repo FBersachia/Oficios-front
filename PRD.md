@@ -56,10 +56,10 @@
   - [x] 3.1.1 `Header` con navegación responsiva y estado de autenticación
   - [x] 3.1.2 `Footer` con información de contacto y enlaces legales
   - [x] 3.1.3 `Layout` principal con Header/Footer
-- [ ] 3.2 Componentes de providers:
-  - [ ] 3.2.1 `ProviderCard` con rating, servicios, y estado de disponibilidad
-  - [ ] 3.2.2 `ProviderGrid` para listados con lazy loading
-  - [ ] 3.2.3 `ProviderSkeleton` para estados de carga
+- [x] 3.2 Componentes de providers:
+  - [x] 3.2.1 `ProviderCard` con rating, servicios, y estado de disponibilidad
+  - [x] 3.2.2 `ProviderGrid` para listados con lazy loading
+  - [x] 3.2.3 `ProviderSkeleton` para estados de carga
 - [ ] 3.3 Componentes de búsqueda y filtros:
   - [ ] 3.3.1 `SearchBar` con autocomplete y validación
   - [ ] 3.3.2 `FilterPanel` para servicios, ubicación, rating, etc.
