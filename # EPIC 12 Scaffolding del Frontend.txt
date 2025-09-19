@@ -1,0 +1,45 @@
+# EPIC 12: Scaffolding del Frontend y Vistas Públicas
+
+## 1.0 Configuración Inicial del Frontend (React)
+
+- [ ] 1.1 Inicializar el proyecto con Vite y la plantilla de React + TypeScript.
+- [ ] 1.2 Instalar dependencias principales: `axios` (para llamadas a la API), `react-router-dom` (para la navegación), y una librería de componentes como `Chakra UI` o `MUI` para acelerar el desarrollo.
+- [ ] 1.3 Configurar la estructura de carpetas: `src/components`, `src/pages`, `src/services`, `src/hooks`, etc.
+- [ ] 1.4 Configurar una instancia de `axios` pre-configurada con la `baseURL` de la API (`http://localhost:5000`).
+
+---
+
+## 2.0 Creación de Componentes Reutilizables de UI
+
+- [ ] 2.1 Crear un componente `Header` con el logo, enlaces de navegación ("Buscar Proveedores", "Iniciar Sesión", "Registrarse").
+- [ ] 2.2 Crear un componente `Footer` con información básica.
+- [ ] 2.3 Crear un componente `ProviderCard` para mostrar la información resumida de un proveedor en los listados.
+- [ ] 2.4 Crear un componente `SearchBar` para la búsqueda principal, con filtros por servicio, ubicación, etc.
+
+---
+
+## 3.0 Implementación de Vistas Públicas
+
+- [ ] 3.1 **Página Principal (`/`)**:
+- [ ] 3.1.1 Integrar el `SearchBar`.
+- [ ] 3.1.2 Mostrar listados de proveedores destacados consumiendo el endpoint `GET /api/providers`.
+- [ ] 3.2 **Página de Resultados de Búsqueda (`/providers`):**
+- [ ] 3.2.1 Mostrar una grilla de `ProviderCard` con los resultados de `GET /api/providers?[parametros]`.
+- [ ] 3.2.2 Implementar la paginación basada en la respuesta de la API.
+- [ ] 3.3 **Página de Detalle del Proveedor (`/providers/:id`):**
+- [ ] 3.3.1 Mostrar toda la información pública del proveedor consumiendo `GET /api/providers/:id`.
+- [ ] 3.3.2 Mostrar el portfolio del proveedor.
+- [ ] 3.3.3 Crear una sección de reseñas que consuma `GET /api/providers/:id/reviews` con su propia paginación.
+
+---
+
+## 4.0 Configuración de Navegación (Routing)
+
+- [ ] 4.1 Configurar `react-router-dom` para manejar las rutas de las vistas públicas (`/`, `/providers`, `/providers/:id`).
+- [ ] 4.2 Asegurar que la navegación entre páginas sea fluida y que los parámetros de búsqueda se reflejen en la URL.
+
+---
+
+### ### Archivos Relevantes
+
+- `FRONTEND_API_DOCUMENTATION.md` - Contiene todos los endpoints y modelos de datos necesarios para esta épica.
