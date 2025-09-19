@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import { notificationService } from '@/services/notificationService';
+import { notificationService } from '@/services/notificationService.tsx';
 import { handleApiError } from '@/utils/errorHandlers';
 import type { ToastOptions, CustomToastData } from '@/types/notifications';
 

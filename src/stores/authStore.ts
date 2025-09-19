@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import api from '@/lib/axios';
 import { isTokenExpired } from '@/utils/tokenUtils';
-import { notificationService } from '@/services/notificationService';
+import { notificationService } from '@/services/notificationService.tsx';
 import type { AuthStore, LoginCredentials, RegisterData, AuthResponse, User } from '@/types/auth';
 
 const useAuthStore = create<AuthStore>()(

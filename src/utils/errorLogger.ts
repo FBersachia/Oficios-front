@@ -4,7 +4,7 @@ import type { AppError, ErrorLogEntry, ErrorLevel } from '@/types/error';
 let notificationService: any = null;
 const getNotificationService = async () => {
   if (!notificationService) {
-    const module = await import('@/services/notificationService');
+    const module = await import('@/services/notificationService.tsx');
     notificationService = module.notificationService;
   }
   return notificationService;
