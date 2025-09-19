@@ -74,13 +74,13 @@
 
 ## 4.0 Implementación de Vistas Públicas
 
-- [ ] 4.1 **Página Principal (`/`)**:
-  - [ ] 4.1.1 Hero section con `SearchBar` prominente
-  - [ ] 4.1.2 Sección de servicios populares
-  - [ ] 4.1.3 Listado de proveedores destacados (rating alto)
-  - [ ] 4.1.4 Testimonios/reseñas destacadas
-  - [ ] 4.1.5 Sección "Cómo funciona" explicativa
-  - [ ] 4.1.6 Optimización SEO (meta tags, structured data)
+- [x] 4.1 **Página Principal (`/`)**:
+  - [x] 4.1.1 Hero section con `SearchBar` prominente
+  - [x] 4.1.2 Sección de servicios populares
+  - [x] 4.1.3 Listado de proveedores destacados (rating alto)
+  - [x] 4.1.4 Testimonios/reseñas destacadas
+  - [x] 4.1.5 Sección "Cómo funciona" explicativa
+  - [x] 4.1.6 Optimización SEO (meta tags, structured data)
 - [ ] 4.2 **Página de Resultados de Búsqueda (`/providers`):**
   - [ ] 4.2.1 `FilterPanel` lateral con filtros activos visibles
   - [ ] 4.2.2 Grilla responsiva de `ProviderCard` con infinite scroll
