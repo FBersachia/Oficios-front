@@ -1,4 +1,4 @@
-import toast, { ToastOptions as HotToastOptions } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import type { ToastType, ToastOptions, CustomToastData } from '@/types/notifications';
 
 class NotificationService {
@@ -181,7 +181,7 @@ class NotificationService {
     return this.defaultOptions;
   }
 
-  private mergeOptions(options?: ToastOptions): HotToastOptions {
+  private mergeOptions(options?: ToastOptions): any {
     return {
       duration: options?.duration ?? this.defaultOptions.duration,
       position: options?.position ?? this.defaultOptions.position,

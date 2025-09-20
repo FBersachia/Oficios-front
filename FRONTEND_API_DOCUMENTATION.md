@@ -19,13 +19,13 @@
 
 ### Base URL de la API
 ```
-Desarrollo: http://localhost:5000
+Desarrollo: http://localhost:3000
 Producción: [URL a definir]
 ```
 
 ### Configuración CORS
 El backend está configurado para aceptar solicitudes desde:
-- `http://localhost:3000` (default para React)
+- `http://localhost:5174` (frontend de desarrollo con Vite)
 - Configurable via variable de entorno `CORS_ORIGIN`
 
 ### Health Check
@@ -638,6 +638,6 @@ Para consultas sobre la API o problemas técnicos:
 
 ---
 
-**Última actualización**: 18 de Septiembre 2025
+**Última actualización**: 19 de Septiembre 2025
 **Versión del documento**: 1.0
 **Estado**: ✅ Listo para desarrollo de Frontend
